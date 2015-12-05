@@ -26,14 +26,20 @@ public class MainActivity extends AppCompatActivity {
             AnimationDrawable animationDrawable = (AnimationDrawable) getDrawable(R.drawable.ic_equilizer_white_36dp);
             imageView.setImageDrawable(animationDrawable);
             if (animationDrawable != null) animationDrawable.start();
-
-
         } else {
             Toast.makeText(getApplicationContext(), "This device doesnot support Animation Drawable", Toast.LENGTH_LONG).show();
         }
-
-
     }
 
+    public void secondMethod(View v) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            AnimationDrawable animationDrawable = new AnimationDrawable();
+            animationDrawable.addFrame(getDrawable(R.drawable.ic_equalizer1_white_36dp), 200);
+            animationDrawable.addFrame(getDrawable(R.drawable.ic_equalizer2_white_36dp), 200);
+            animationDrawable.addFrame(getDrawable(R.drawable.ic_equalizer3_white_36dp), 200);
+            imageView.setImageDrawable(animationDrawable);
+            if (animationDrawable != null) animationDrawable.start();
+        }
+    }
 
 }

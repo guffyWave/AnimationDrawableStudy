@@ -17,7 +17,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:onClick="clickMe"
+        android:onClick="secondMethod"
         android:text="New Button" />
 
     <ImageView
